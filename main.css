@@ -1,0 +1,175 @@
+/*=======================
+GLOBAL STYLES
+=======================*/
+
+:root {
+    --navbar-background: rgb(99, 131, 159);
+    --light-background: rgba(164, 194, 227, 0.276);
+    --font-light-color1: rgba(255, 255, 255, 0.92);
+    --font-dark-color1: rgb(48, 48, 48);
+    /* --link-hover-color: rgba(176, 172, 128, 0.324); */
+    --link-hover-color: rgba(78, 103, 125, 0.605);
+    --nav-height: 15vh;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: var(--light-background);
+}
+
+* {
+    box-sizing: border-box;
+    /* outline: 1px solid rgb(0, 0, 0); */
+    margin: 0;
+    padding: 0;
+    font-family: Helvetica, Arial, sans-serif;
+}
+
+/*=======================
+NAVBAR STYLES
+=======================*/
+
+#navbar {
+    position: sticky;
+    top: 0;
+    background: linear-gradient(var(--navbar-background) 70%, rgba(255, 255, 255, 0) 100%);
+    width: 100%;
+    height: var(--nav-height);
+    margin: auto;
+    display: flex;
+    justify-content: flex-end;
+}
+
+#navbar ul {
+    list-style: none;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    /* width: 50%; */
+}
+
+#navbar a {
+    color: var(--font-light-color1);
+    text-decoration: none;
+    font-size: 2.3em;
+    letter-spacing: 0.1em;
+    padding: 10px 20px;
+    margin: 0 20px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease-in-out;
+}
+
+#navbar a:hover {
+    background-color: var(--link-hover-color);
+}
+
+a:visited {
+    color: var(--font-light-color1);
+}
+
+/*=======================
+WELCOME STYLES
+=======================*/
+
+#welcome-section {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    /* background-color: var(--light-background); */
+}
+
+#welcome-section * {
+    color: var(--font-dark-color1);
+    letter-spacing: 0.1em;
+}
+
+#welcome-section h1 {
+    font-size: 5em;
+    font-weight: normal;
+    padding-top: 120px;
+}
+
+#welcome-section p {
+    font-size: 2em;
+}
+
+/*=======================
+PROJECT STYLES
+=======================*/
+
+#projects {
+    /* background-color: var(--light-background); */
+    /* margin-top: var(--nav-height); */
+    padding-top: 120px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#projects h1 {
+    font-size: 2.5em;
+    font-weight: normal;
+    letter-spacing: 0.05em;
+    margin-bottom: 1em;
+}
+
+#tile-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    grid-gap: 20px;
+}
+
+.project-tile {
+    background-color: rgb(179, 96, 96);
+    width: 350px;
+    height: 400px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    transition: box-shadow 0.2s ease-in-out;
+}
+
+.project-tile:hover {
+    box-shadow: 0 4px 8px 5px rgba(0, 0, 0, 0.2), 0 6px 20px 5px rgba(0, 0, 0, 0.19);
+}
+
+/*=======================
+CONTACT STYLES
+=======================*/
+
+#contact {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 120px;
+    padding-bottom: 400px;
+}
+
+#contact p {
+    font-size: 1.7em;
+    padding-bottom: 3em;
+}
+
+#contact input {
+    font-size: 1.2em;
+    padding: 10px;
+}
+
+/*=======================
+FOOTER STYLES
+=======================*/
+
+footer {
+    margin: 20px 0;
+    padding: 40px;
+    border-top: 3px solid black;
+}
+
+footer p {
+    text-align: right;
+}
