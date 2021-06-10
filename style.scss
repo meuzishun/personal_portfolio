@@ -59,7 +59,7 @@ body {
         h1 {
             font-size: 5em;
             font-weight: normal;
-            padding-top: 120px;
+            padding-top: 15vh;
         }
         
         p {
@@ -68,7 +68,7 @@ body {
     }
 
     #projects {
-        padding-top: 120px;
+        padding-top: 15vh;
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -124,17 +124,20 @@ body {
         display: flex;
         flex-direction: column;
         align-items: center;
-        padding-top: 200px;
+        padding-top: 15vh;
         padding-bottom: 400px;
 
-        p {
+        p, a {
             font-size: 1.7em;
             padding-bottom: 3em;
+            color: $font-dark-color1;
+            text-decoration: none;
         }
         
         input {
             font-size: 1.2em;
             padding: 5px 10px;
+            margin-bottom: 40px;
         }
         
         input[type="submit"] {
@@ -163,19 +166,25 @@ body {
             }
         }
 
+        #welcome-section {
+            h1 {
+                font-size: 4em;
+            }
+        }
+
         #projects {
             h1 {
                 font-size: 2em;
             }
 
             .project-tile {
-                width: 400px;
-                height: 280px;
+                width: 40vw;
+                height: 28vw;
             }
         }
 
         #contact {
-            p {
+            p, a {
                 font-size: 1.4em;
             }
         }
@@ -191,6 +200,47 @@ body {
                 font-size: 1.4em;
                 margin: 0;
             }
+        }
+
+        #welcome-section {
+            h1 {
+                font-size: 2.5em;
+            }
+
+            p {
+                font-size: 1.5em;
+            }
+        }
+
+        #projects {
+            h1 {
+                font-size: 1.2em;
+            }
+
+            #tile-container {
+                grid-template-columns: 1fr;
+                grid-template-rows: auto;
+            }
+
+            .project-tile {
+                width: 80vw;
+                height: 56vw;
+            }
+        }
+
+        #contact {
+            p, a {
+                font-size: 1em;
+            }
+
+            input {
+                font-size: 1em;
+                width: 100%;
+            }
+        }
+
+        footer {
+            font-size: 0.5em;
         }
     }
 }
