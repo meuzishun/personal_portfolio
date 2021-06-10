@@ -1,11 +1,10 @@
 
-@include colors;
-@include breakpoints;
-@include reset;
+@import 'colors';
+@import 'breakpoints';
+@import 'reset';
 
 body {
 	background-color: $light-background;
-
 
     #navbar {
         position: sticky;
@@ -16,10 +15,6 @@ body {
         margin: auto;
         display: flex;
         justify-content: flex-end;
-
-        @media (max-width: $breakpoint2) {
-            height: 30vh;
-        }
 
         ul {
             list-style: none;
@@ -47,17 +42,6 @@ body {
         a:visited {
             color: $font-light-color1;
         }
-
-        @media (max-width: $breakpoint2) {
-            ul {
-                flex-direction: column;
-            }
-
-            a {
-                font-size: 5vw;
-                
-            }
-        }
     }
 
     #welcome-section {
@@ -66,7 +50,6 @@ body {
         flex-direction: column;
         justify-content: flex-start;
         align-items: center;
-        /* background-color: $light-background; */
 
         * {
             color: $font-dark-color1;
@@ -82,23 +65,9 @@ body {
         p {
             font-size: 2em;
         }
-
-        @media (max-width: $breakpoint2) {
-            h1 {
-                font-size: 9vw;
-            }
-        }
-
-        @media (max-width: $breakpoint3) {
-            p {
-                font-size: 5vw;
-            }
-        }
     }
 
     #projects {
-        /* background-color: $light-background; */
-        /* margin-top: $nav-height; */
         padding-top: 120px;
         display: flex;
         flex-direction: column;
@@ -111,21 +80,11 @@ body {
             margin-bottom: 1em;
         }
 
-        @media (max-width: $breakpoint2) {
-            h1 {
-                font-size: 4vw;
-            }
-        }
-
         #tile-container {
             display: grid;
             grid-template-columns: repeat(2, 1fr);
             grid-template-rows: repeat(2, 1fr);
             grid-gap: 20px;
-
-            @media (max-width: $breakpoint1) {
-                grid-template-columns: 1fr;
-            }
         }
 
         .project-tile {
@@ -138,11 +97,6 @@ body {
             border-radius: 10px;
             box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
             transition: box-shadow 0.2s ease-in-out;
-
-            @media (max-width: $breakpoint3) {
-                width: 75vw;
-                height: 75vw * 0.7;
-            }
         }
 
         .project-tile:hover {
@@ -199,3 +153,44 @@ body {
     }
 }
 
+@media (max-width: $breakpoint2) {
+    body {
+        #navbar {
+            justify-content: center;
+
+            a {
+                font-size: 1.6em;
+            }
+        }
+
+        #projects {
+            h1 {
+                font-size: 2em;
+            }
+
+            .project-tile {
+                width: 400px;
+                height: 280px;
+            }
+        }
+
+        #contact {
+            p {
+                font-size: 1.4em;
+            }
+        }
+    }
+}
+
+@media (max-width: $breakpoint3) {
+    body {
+        #navbar {
+            justify-content: center;
+
+            a {
+                font-size: 1.4em;
+                margin: 0;
+            }
+        }
+    }
+}
